@@ -1,0 +1,246 @@
+body.lb-custom-tv-body{
+    overflow: hidden;
+}
+
+.lb-custom-tv,
+.lb-custom-tv *{
+    box-sizing: border-box;
+    font-family: lato, Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4em;
+    color: #fff!important;
+}
+[class*="lb-custom-tv-tela-"]{
+    position: fixed;
+    background-color: #000;
+    padding: 50px;
+    z-index: 999;
+    width: 50%;
+    border: 10px solid #fff
+}
+[class*="lb-custom-tv-tela-"] h2{
+    font-size: 30px;
+    line-height: 30px;
+    color: #f95600!important;
+    font-weight: bold;
+    margin: 0;
+}
+.lb-custom-tv-tela-1{
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+.lb-custom-tv-tela-1:after{
+    content: "";
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    background-color: #fff;
+    opacity: .5;
+    margin-top: -10px;
+}
+.lb-custom-tv-tela-3{
+    right: 0;
+    top: 0;
+    bottom: 50%;
+    transition: 300ms all;
+}
+.lb-custom-tv-tela-4{
+    right: 0;
+    top: 50%;
+    bottom: 0;
+}
+/* .lb-custom-tv.tvexterna-ativa .lb-custom-tv-tela-3{ 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999999999;
+} */
+.lb-custom-tv-p-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+.lb-custom-tv-p-top{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-height: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+.lb-custom-tv-brand{
+    display: block;
+    margin: 0 auto 2%;
+    width: 180px;
+}
+.lb-custom-tv-coach{
+    position: absolute;
+    bottom: 0;
+    left: -20%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    z-index: 1;
+}
+.lb-custom-tv-alunos{
+    padding: 0;
+    margin: -5px;
+    list-style: none;
+    display: -ms-flexbox!important;
+    display: flex!important;
+    -ms-flex-align: center!important;
+    align-items: center!important;
+    -ms-flex-wrap: wrap!important;
+    flex-wrap: wrap!important;
+}
+    .lb-custom-tv-alunos li{
+        padding: 5px;
+        margin: 0;
+        width: 25%;
+        list-style: none;
+        display: -ms-flexbox!important;
+        display: flex!important;
+        -ms-flex-align: center!important;
+        align-items: center!important;
+    }
+        .lb-custom-tv-alunos li img{
+            border-radius: 100%;
+            border: 2px solid #fff;
+            width: 50px;
+            height: 50px;
+            margin-right: 5px;
+        }
+        .lb-custom-tv-alunos li span{
+            font-size: 15px;
+            font-weight: bold;
+            line-height: 15px;
+            color: #fff!important;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .js-get-wod {
+            background-color: rgba(0,0,0,.3);
+            max-width: 65%;
+            margin: 0 0 0 auto;
+        }
+        .js-get-wod *{
+            font-size: 34px!important;
+            line-height: 40px;
+            font-weight: bold;
+        }
+        .js-get-wod .time-cap-line{
+            display: none!important;
+        }
+
+.lb-custom-tv-loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9991;
+    background-color: #000;
+}
+    .lb-custom-tv-loader img{
+        display: block;
+        margin: auto;
+    }
+.lb-ellipsis {
+    display: block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+}
+
+.lb-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lb-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lb-ellipsis1 0.6s infinite;
+}
+
+.lb-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lb-ellipsis2 0.6s infinite;
+}
+
+.lb-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lb-ellipsis2 0.6s infinite;
+}
+
+.lb-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lb-ellipsis3 0.6s infinite;
+}
+
+@keyframes lb-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lb-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lb-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+
+
+#lb-custom-tvexterna{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}

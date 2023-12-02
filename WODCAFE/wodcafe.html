@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        html,
+        body{
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            background: #000;
+            color: #fff;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .swiper,
+        img,
+        video {
+            display: block;
+            /* position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%); */
+            min-width: 100%;
+            min-height: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+        .swiper-pagination .swiper-pagination-progressbar-fill{
+            border: 1px solid #000!important;
+            background: #f16536!important;
+        }
+        .swiper-lazy-preloader{
+            position: fixed!important;
+            border-color: #f16536!important;
+            border-top-color: transparent!important;
+            z-index: 99999!important;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+
+<body id="body">
+
+    <div class="swiper">
+        <div class="swiper-pagination"></div>
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <img data-src="./banners/camp-1.jpeg" class="swiper-lazy" />
+                <div class="swiper-lazy-preloader"></div>
+            </div>
+            <div class="swiper-slide">
+                <img data-src="./banners/camp-2.jpeg" class="swiper-lazy" />
+                <div class="swiper-lazy-preloader"></div>
+            </div>
+
+            <!-- <div class="swiper-slide">
+                <video width="1980" id="video" autoplay muted loop>
+                    <source src="./banners/video-utc-games.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="swiper-slide">
+                <img data-src="./banners/acai.jpeg" class="swiper-lazy" />
+                <div class="swiper-lazy-preloader"></div>
+            </div>
+            <div class="swiper-slide">
+                <img data-src="./banners/tostex.jpg" class="swiper-lazy" />
+                <div class="swiper-lazy-preloader"></div>
+            </div>
+            <div class="swiper-slide">
+                <img data-src="./banners/foce-coffee.jpeg" class="swiper-lazy" />
+                <div class="swiper-lazy-preloader"></div>
+            </div>
+            <div class="swiper-slide">
+                <img data-src="./banners/pao-na-chapa.jpg" class="swiper-lazy" />
+                <div class="swiper-lazy-preloader"></div>
+            </div> -->
+            <!-- <div class="swiper-slide">
+                <img data-src="./banners/pre-pos-treino.jpeg" class="swiper-lazy" />
+                <div class="swiper-lazy-preloader"></div>
+            </div> -->
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            const swiper = new Swiper('.swiper', {
+                effect: 'cube',
+                cubeEffect: {
+                    slideShadows: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    type: "progressbar",
+                },
+                loop: true,
+                autoplay: {
+                    delay: 15000,
+                },
+                preloadImages: false,
+                lazy: true,
+            });
+        })
+
+    </script>
+</body>
+
+</html>
