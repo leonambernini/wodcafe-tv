@@ -2,7 +2,7 @@ var CDN = 'https://wodcafe-tv.vercel.app/';
 var CDN_IMAGES = CDN + 'images/';
 var IMG_BRAND = CDN_IMAGES + 'utc-brand.png';
 
-$('body').append(`<link rel="stylesheet" href="${CDN}utc-tv.css?a=${Math.random()}">`)
+$('body').append(`<link rel="stylesheet" href="${CDN}css/utc-tv.css?a=${Math.random()}">`)
 
 try {
     var AULAS = JSON.parse(localStorage.getItem("lb-tv")) || {};
