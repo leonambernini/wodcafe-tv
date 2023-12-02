@@ -17,7 +17,7 @@ body.lb-custom-tv-body{
     padding: 50px;
     z-index: 999;
     width: 50%;
-    border: 10px solid #fff
+    /* border: 10px solid #fff */
 }
 [class*="lb-custom-tv-tela-"] h2{
     font-size: 30px;
@@ -31,7 +31,7 @@ body.lb-custom-tv-body{
     top: 0;
     bottom: 0;
 }
-.lb-custom-tv-tela-1:after{
+/* .lb-custom-tv-tela-1:after{
     content: "";
     height: 20px;
     width: 100%;
@@ -42,7 +42,7 @@ body.lb-custom-tv-body{
     background-color: #fff;
     opacity: .5;
     margin-top: -10px;
-}
+} */
 .lb-custom-tv-tela-3{
     right: 0;
     top: 0;
