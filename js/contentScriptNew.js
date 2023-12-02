@@ -204,26 +204,33 @@ function checkOptionsWods(){
 }
 
 function eventos(){
-    // Função para manipular as alterações no DOM
     function handleDOMChanges() {
         atualizaAulas();
         atualizaQtdCheckins();
         checkOptionsWods();
     }
-
-    // Seleciona o elemento alvo
-    var targetElement = document.getElementById('scheduleId');
-
-    // Cria uma instância de MutationObserver com a função de retorno de chamada
-    var observer = new MutationObserver(handleDOMChanges);
-
-    // Configuração do observador para observar mudanças nos nós filho e remoção de nós
-    var config = { childList: true, subtree: true };
-
-    // Registra o observador no elemento alvo com a configuração
-    observer.observe(targetElement, config);
-
-    // Lembre-se de chamar observer.disconnect() quando você não precisar mais observar as mudanças no DOM para liberar recursos.
+    
+    document.addEventListener('DOMContentLoaded', function () {
+        // Seletor para o elemento alvo
+        var targetElement = document.getElementById('scheduleId');
+    
+        // Verifica se o elemento alvo existe
+        if (targetElement) {
+            // Cria uma instância de MutationObserver com a função de retorno de chamada
+            var observer = new MutationObserver(handleDOMChanges);
+    
+            // Configuração do observador para observar mudanças nos nós filho e remoção de nós
+            var config = { childList: true, subtree: true };
+    
+            // Registra o observador no elemento alvo com a configuração
+            observer.observe(targetElement, config);
+    
+            // Lembre-se de chamar observer.disconnect() quando você não precisar mais observar as mudanças no DOM para liberar recursos.
+        } else {
+            console.error("Elemento alvo não encontrado.");
+        }
+    });
+    
 
 
     document.addEventListener('keydown', function(e) {
