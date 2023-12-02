@@ -1,4 +1,4 @@
-var CDN = 'https://cdn.leonambernini.com.br/utc-tv/';
+var CDN = 'https://wodcafe-tv.vercel.app/';
 var CDN_IMAGES = CDN + 'images/';
 var IMG_BRAND = CDN_IMAGES + 'utc-brand.png';
 
