@@ -3,9 +3,7 @@
     "description": "Manipulação da tela WOD TV do aplicativo Tecnofit",
     "version": "1.0",
     "manifest_version": 3,
-    "permissions": [
-        "storage"
-    ],
+    "permissions": ["storage"],
     "action": {
         "default_popup": "popup.html",
         "default_icon": {
@@ -14,16 +12,8 @@
     },
     "content_scripts": [
         {
-            "matches": [
-                "https://app.tecnofit.com.br/*"
-            ],
-            "js": [
-                "js/jquery-3.6.0.min.js",
-                "js/contentScriptNew.js"
-            ],
-            "css": [
-                "css/utc-tv.css"
-            ]
+            "matches": ["https://app.tecnofit.com.br/*"],
+            "js": ["js/jquery-3.6.0.min.js", "js/contentScriptNew.js"]
         }
     ],
     "icons": {
